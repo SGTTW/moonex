@@ -64,7 +64,7 @@ const Hero = () => {
       <div
         className={`${
           isMenuOpen ? "flex" : "hidden"
-        } sm:hidden absolute rounded-sm top-16 left-[15rem] w-[10rem] bg-white text-black px-6 py-4 flex-col space-y-4 transition-all duration-300 ease-in-out z-20`}
+        } sm:hidden absolute rounded-sm top-20 left-[12rem] w-[10rem] bg-white text-black px-6 py-4 flex-col space-y-4 transition-all duration-300 ease-in-out z-20`}
       >
         <a
           href="#home"
@@ -111,7 +111,7 @@ const Hero = () => {
         </div>
 
         {/* Hero Content */}
-        <h1 className="relative text-white text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight z-20 lg:mt-20">
+        <h1 className="relative  text-white text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight z-20 lg:mt-20">
           Trusted Multi-Chain <br />
           <span className="text-yellow-400">DEX Platform</span>
         </h1>
