@@ -106,7 +106,7 @@ const Hero = () => {
           <img
             src={star1}
             alt="star"
-            className="absolute top-[7rem] left-[8rem] z-0 sm:hidden"
+            className="absolute top-[7rem] left-[8rem] z-0 hidden sm:block"
           />
         </div>
 
