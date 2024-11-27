@@ -5,13 +5,13 @@ import circle from "../assets/circles.png";
 import ellipse from "../assets/bg-gradient-img.png";
 import star from "../assets/star-img.png";
 import star1 from "../assets/star-img (1).png";
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";  
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Hero = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);  
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); // Toggle the menu state
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
@@ -25,7 +25,10 @@ const Hero = () => {
 
         {/* Navigation Links */}
         <nav className="hidden sm:flex space-x-6 text-white text-sm lg:text-base">
-          <a href="#home" className="hover:text-yellow-400 transition">
+          <a
+            href="#home"
+            className="text-yellow-400 hover:text-yellow-400 transition"
+          >
             Home
           </a>
           <a href="#about" className="hover:text-yellow-400 transition">
@@ -41,6 +44,9 @@ const Hero = () => {
             Contact Us
           </a>
         </nav>
+        <button className="hidden sm:none bg-yellow-400 text-black px-4 py-2 rounded-[100px] hover:bg-yellow-500 transition">
+          Connect Wallet
+        </button>
 
         {/* Hamburger Icon for Mobile */}
         <div className="sm:hidden flex items-center">
@@ -58,9 +64,12 @@ const Hero = () => {
       <div
         className={`${
           isMenuOpen ? "flex" : "hidden"
-        } sm:hidden absolute rounded-sm  top-16 left-[15rem] w-[10rem] bg-white text-black px-6 py-4 flex-col space-y-4 transition-all duration-300 ease-in-out z-20`}
+        } sm:hidden absolute rounded-sm top-16 left-[15rem] w-[10rem] bg-white text-black px-6 py-4 flex-col space-y-4 transition-all duration-300 ease-in-out z-20`}
       >
-        <a href="#home" className="hover:text-yellow-400 transition block">
+        <a
+          href="#home"
+          className=" text-yellow-400 hover:text-yellow-400 transition block"
+        >
           Home
         </a>
         <a href="#about" className="hover:text-yellow-400 transition block">
@@ -75,6 +84,9 @@ const Hero = () => {
         <a href="#contact" className="hover:text-yellow-400 transition block">
           Contact Us
         </a>
+        <button className="bg-yellow-400 text-black px-4 py-2 rounded-[100px] hover:bg-yellow-500 transition">
+          Connect Wallet
+        </button>
       </div>
 
       {/* Hero Section */}
@@ -89,12 +101,12 @@ const Hero = () => {
           <img
             src={circle}
             alt="circle"
-            className="absolute top-0 left-0 w-full h-full object-cover z-10 opacity-75"
+            className="absolute top-0 left-0 w-full h-full object-cover z-10"
           />
           <img
             src={star1}
             alt="star"
-            className="absolute top-[7rem] left-[8rem] z-0 "
+            className="absolute top-[7rem] left-[8rem] z-0 sm:hidden"
           />
         </div>
 
@@ -115,20 +127,18 @@ const Hero = () => {
           </button>
         </div>
 
-        {/* Ellipse-like Div */}
-        <span className="absolute w-[200px] h-[200px] sm:w-[150px] sm:h-[150px] rounded-full top-[5%] right-[2%] sm:top-[10%] sm:right-[5%] z-10">
-          <img src={ellipse} alt="ellipse" className="w-full h-full" />
+        {/* Ellipse-like Div - Hidden on small screens */}
+        <span className="hidden sm:block absolute w-[300px] h-[300px] rounded-full top-[2%] right-[1%] z-10">
+          <img src={ellipse} alt="ellipse" />
           <img
             src={star}
             alt="star"
-            className="absolute top-[5rem] left-[6rem] sm:top-[2rem] sm:left-[3rem] z-0"
-            style={{ transform: "scale(0.6)" }} 
+            className="absolute top-[5rem] left-[10rem] z-0"
           />
           <img
             src={star1}
             alt="star"
-            className="absolute top-[15rem] left-[8rem] sm:top-[12rem] sm:left-[4rem] z-0"
-            style={{ transform: "scale(0.6)" }}  
+            className="absolute top-[20rem] left-[10rem] z-0"
           />
         </span>
       </div>
