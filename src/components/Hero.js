@@ -141,7 +141,7 @@ const Hero = () => {
         {/* Ellipse-like Div */}
         {/* <div className="absolute bg-yellow-500 w-[200px] h-[200px] rounded-full top-[20%] right-[10%] z-10 "></div> */}
         <span className="absolute  w-[300px] h-[300px] rounded-full top-[2%] right-[1%] z-10">
-          <img src={ellipse} />
+          <img src={ellipse} alt="ellipse" />
           <img
             src={star}
             alt="star"
